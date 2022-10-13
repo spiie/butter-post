@@ -1,0 +1,27 @@
+Yellow Darker : Yellow 500
+Yellow : Yellow 400
+Yellow clay : Yellow 300
+Yellow White : Yellow 200
+
+Blue Darker : Blue 700
+Blue : Blue 600
+Blue Clay : Blue 400
+Blue White : Blue 200
+
+White : White
+
+Gray white : zinc 50
+Gray clay : zinc 100
+Gray : zinc 200
+Gray dark : zinc 300
+
+Black white : zinc 500
+Black Clay : zinc 600
+Black : zinc 700
+Black Darker : zinc 800
+
+Error : Red 500
+Error Dark : Red 600 
+
+Check : Emerald 400
+Check Dark : Emerald 500
