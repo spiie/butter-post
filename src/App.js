@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 //PAGES
-import LogIn from './login';
-import Register from './register';
+import LogIn from './pages/login';
+import Register from './pages/register';
+import Chat from './pages/chat';
 
 //CSS
 import "./css/index.css"
@@ -13,10 +13,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LogIn/>}/>
-        <Route path="*" element={<LogIn/>}/>
-        <Route path="/login" element={<LogIn/>}/>
-        <Route path="/register" element={<Register/>}/>
+        <Route path="/" element={<Register />} />
+        <Route path="*" element={<Register />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
     </Router>
   )
