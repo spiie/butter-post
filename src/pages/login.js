@@ -22,7 +22,7 @@ const Login = () => {
     })
     const loginStatus = login.status
     if (loginStatus === 200) {
-      // const res = await login.json()
+      console.log("Loged")
     } else {
       setUserValidity(false)
     }
