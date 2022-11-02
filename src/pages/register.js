@@ -20,12 +20,9 @@ const Register = () => {
     } else {
       setUsernameLengthStatus(true)
     }
-    const check = await fetch("/api/register/", {
+    const check = await fetch("/api/validators/usernameValidator", {
       method: "POST",
-      body: JSON.stringify({
-        type: "checkUsername",
-        username: username_loc
-      }),
+      body: JSON.stringify({ username: username_loc }),
       headers: {
         "Content-type": "application/json; charser=UTF-8"
       }
@@ -67,12 +64,9 @@ const Register = () => {
       setemailValidityStatus(false)
       return false
     }
-    const check = await fetch("/api/register", {
+    const check = await fetch('/api/validators/emailValidator', {
       method: "POST",
-      body: JSON.stringify({
-        type: "checkEmail",
-        email: email_loc
-      }),
+      body: JSON.stringify({ email: email_loc }),
       headers: {
         "Content-type": "application/json; charser=UTF-8"
       }
@@ -96,10 +90,9 @@ const Register = () => {
 
     if (check1 === false || check2 === false || check3 === false) return
 
-    const register = await fetch('/api/register/', {
+    const register = await fetch('/api/user/create/', {
       method: "POST",
       body: JSON.stringify({
-        type: "register",
         username: username,
         email: email,
         password: password,
